@@ -44,33 +44,37 @@ namespace UnitTestingXF.Tests.ViewModelsTests
         }
 
         [Test]
-        public void UsernameValidationTest()
+        public void FormValidationTest()
         {
 			var vm = new LoginViewModel();
 
             vm.Username = "test";
+            vm.Password = "test";
             Assert.IsFalse(vm.IsFormValid);
 
             vm.Username = "test@test";
+            vm.Password = "test";
             Assert.IsFalse(vm.IsFormValid);
 
-			vm.Username = "test@test.com";
+            vm.Username = "test@test.com";
+            vm.Password = "test123";
+            Assert.IsFalse(vm.IsFormValid);
+
+            vm.Username = "test@test";
+            vm.Password = "test123!";
+            Assert.IsFalse(vm.IsFormValid);
+
+            vm.Username = "test";
+            vm.Password = "test123!";
+            Assert.IsFalse(vm.IsFormValid);
+
+            vm.Username = "    ";
+            vm.Password = "    ";
+            Assert.IsFalse(vm.IsFormValid);
+
+            vm.Username = "test@test.com";
+            vm.Password = "test123!";
 			Assert.IsTrue(vm.IsFormValid);
         }
-
-		[Test]
-		public void PasswordValidationTest()
-		{
-			var vm = new LoginViewModel();
-
-            vm.Password = "test";
-			Assert.IsFalse(vm.IsFormValid);
-
-			vm.Password = "test123";
-			Assert.IsFalse(vm.IsFormValid);
-
-			vm.Password = "test123!";
-			Assert.IsTrue(vm.IsFormValid);
-		}
     }
 }

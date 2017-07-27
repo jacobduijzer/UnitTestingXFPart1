@@ -12,7 +12,7 @@ namespace UnitTestingXF.Helpers
 
 		public static bool IsValidEmail(string email)
 		{
-			return !string.IsNullOrEmpty(email) && emailRegex.Match(email).Success;
+			return !string.IsNullOrWhiteSpace(email) && emailRegex.Match(email).Success;
 		}
     }
 }

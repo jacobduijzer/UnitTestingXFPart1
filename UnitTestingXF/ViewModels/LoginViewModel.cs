@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmHelpers;
 using Xamarin.Forms;
+using UnitTestingXF.Helpers;
 
 namespace UnitTestingXF.ViewModels
 {
@@ -31,7 +32,7 @@ namespace UnitTestingXF.ViewModels
 
         public bool IsFormValid
         {
-            get => !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password);            
+            get => EmailValidator.IsValidEmail(Username) && PasswordValidator.IsValidPassword(Password);            
         }
 
 		private async Task DoLoginAsync()
