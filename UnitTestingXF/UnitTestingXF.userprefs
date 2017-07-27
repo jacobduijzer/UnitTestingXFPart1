@@ -1,0 +1,12 @@
+﻿<Properties StartupConfiguration="{E7023988-407C-4820-A2B7-86F18A640BB4}|Default">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Appcell/ValkFietsenbon/ValkFietsenbonApp/Helpers/Validators/AmountValidator.cs" line="7" offsetX="597" offsetY="90" expression="parsedAmount" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.UnitTestingXF.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C7113A57-BFAE-4529-A010-73D74BF01A16" />
+</Properties>
