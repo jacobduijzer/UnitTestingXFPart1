@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using UnitTestingXF.Views;
+using Xamarin.Forms;
 
 namespace UnitTestingXF
 {
@@ -8,7 +9,7 @@ namespace UnitTestingXF
         {
             InitializeComponent();
 
-            MainPage = new UnitTestingXFPage();
+            MainPage = new LoginView();
         }
 
         protected override void OnStart()
